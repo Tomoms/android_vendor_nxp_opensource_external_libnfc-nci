@@ -108,6 +108,7 @@ bool ConfigValue::parseFromString(std::string in) {
 }
 
 void ConfigFile::addConfig(const std::string& key, ConfigValue& value) {
+  LOG(ERROR) << "pn5xx checking for key: " << key << " ;";
   CHECK(!hasKey(key));
   values_.emplace(key, value);
 }
